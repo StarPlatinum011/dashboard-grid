@@ -1,0 +1,244 @@
+:root{
+    --blueish-purp: #4F46E5;
+    --card-bg:#F7F5F2;
+    --slidebar-bg:#8D8DAA;
+    --card-line:#F56D91;
+    --font-main: 'Merriweather Sans', sans-serif;
+    --dash-font-color:#FAFAFA;
+
+}
+
+body{
+    margin: 0 !important;
+    font-family: 'Montserrat', sans-serif;;
+    background-color: #DFDFDE;
+    color: #3F3F46;
+}
+h1{
+    font-size: 1.5rem;
+}
+p{
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+h2{
+    font-size: 1.25rem;
+}
+h3{
+    font-size: 1rem;
+}
+
+h1,h2,h3,h4{
+    color: #171717;
+    font-family: var(--font-main);
+}
+/* the main container  */
+.main-container{
+    display: grid;
+    grid-template-columns:0.7fr 1fr 1fr 1fr ;
+    grid-template-rows: repeat(4,1fr);
+    height: 30rem;
+}
+
+/* style for header */
+.header{
+    grid-column: 2/5;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-bg);
+    padding: 1rem;
+    gap: 1.5rem;
+}
+
+/* style for the element of search group section */
+.search-row{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.search-group{
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.notification-group{
+    grid-column: 2/3;
+    justify-self: end;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+#search-tb{
+    width: max(10rem,28rem);
+    padding: 5px;
+    height: 1.5rem;
+    outline: none;
+    border: 1px solid #cdcdcd;
+    border-color: rgba(0, 0, 0, .15);
+    background-color: white;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.profile-text p, h1{
+    margin: 0;
+}
+
+
+/* styles for the main info groups */
+.main-info-row{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(5rem,1fr));
+    align-items: center;
+}
+.profile-group{
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    gap: 2rem;
+    justify-self: start;
+    align-self: flex-start;
+}
+.profile-text{
+
+}
+.btn-group{
+    grid-column: 2/3;
+    justify-self: end;
+    display: flex;
+    gap: 1rem;
+}
+.btn-group>button{
+    padding: 10px;
+    border-style: none;
+    background-color: var(--slidebar-bg);
+    color: white;
+    width: 5rem;
+    border-radius: 15px;
+    font-weight: normal;
+
+}
+
+/* styles for sidebar */
+.sidebar{
+    grid-column: 1/2;
+    grid-row: 1/5;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--slidebar-bg);
+    color: var(--dash-font-color);
+}
+.dash{
+    display:flex;
+    align-items: center;
+    padding-left: 1rem;
+    gap: 1rem;
+}
+.dash-links{
+    padding-left: 1rem;
+}
+.dash-links h3{
+    color: var(--dash-font-color);
+}
+.dash h1{
+    color: var(--dash-font-color);
+
+}
+.links{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+
+/* style of project elements */
+.my-projects{
+    grid-column: 2/4;
+    grid-row-start: 2/5;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    }
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 2rem;
+}
+.cards{
+    /* grid-column: auto; */
+    background-color: var(--card-bg);  
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 7px;
+    padding: 1rem;
+    transition: 0.3s;
+    display: flex;  
+    flex-direction: column;  
+    text-align: start;  
+    border-left: .5rem solid var(--card-line);
+}
+
+.cards>h3{
+    margin: 0;
+}
+.project-icons{
+    align-self: end;
+    padding: 5px;
+}
+
+
+
+/* style fo the right article contents */
+.right-bar{
+    grid-column: 4/5;
+    grid-row: 2/5;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 1rem 0 1rem;
+}
+.right-bar h2{
+    align-self: center;
+}
+
+.article-update{
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 7px;
+    padding: 1rem;
+    transition: 0.3s;
+}
+
+.article-update h4,
+.u>h4,p
+{
+    margin: 0;
+}
+
+.users-container{
+    gap: 1rem;
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 7px;
+    padding: 10px;
+    transition: 0.3s;
+    padding: 1rem;
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+}
+.users{
+    display: flex;
+    flex-direction: row;
+    gap: 1.4rem;
+}
+hr{
+    margin: 1.2rem 0;
+}
+
